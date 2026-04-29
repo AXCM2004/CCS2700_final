@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arex Mallon - Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f0eded;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    nav {
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      background: #e0dede;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 500;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h1, h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .projects .project {
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .project strong {
+      display: block;
+      margin-top: 0.5rem;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #0077cc;
+    }
+
+    .skills ul {
+      padding-left: 1.2rem;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      background: #0077cc;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+
+  <section id="about" class="hero">
+    <img src="/images/capybara.jpg" alt="Profile Picture">
+    <h1>Arex Mallon</h1>
+    <p>
+      I am a student that likes to build user-friendly web applications focused on clean design and performance.
+      I enjoy turning ideas into simple, functional digital experiences. Also, CAPYBARA
+    </p>
+  </section>
+
+
+  <section id="projects" class="projects">
+    <h3>*These are just example projects that are in no shape or form things I actually worked on*</h3>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>StudySync</h3>
+      <img src="/images/study.jpg" width="300" height="200">
+      <p><strong>Tech Stack:</strong> React, Node.js</p>
+      <p><strong>Problem:</strong> Students needed a way to collaborate on notes in real time.</p>
+      <p><strong>Solution:</strong> Built a web app that allows multiple users to edit and sync notes instantly.</p>
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>CampusEats</h3>
+      <img src="/images/Campus-Eats-THUMB-3091072176.jpg" width="300" height="200">
+      <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+      <p><strong>Problem:</strong> Students had difficulty finding nearby food options on campus.</p>
+      <p><strong>Solution:</strong> Created a simple interface to locate food trucks and vendors.</p>
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>BudgetBuddy</h3>
+      <img src="/images/budgetbuddy.png" width="300" height="200">
+      <p><strong>Tech Stack:</strong> Vue</p>
+      <p><strong>Problem:</strong> Users needed a basic way to track expenses.</p>
+      <p><strong>Solution:</strong> Developed a lightweight finance tracker for daily budgeting.</p>
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>DevDeck</h3>
+      <img src="/images/devdk.jpg" width="300" height="200">
+      <p><strong>Tech Stack:</strong> JavaScript, API</p>
+      <p><strong>Problem:</strong> Developers wanted a quick overview of their GitHub stats.</p>
+      <p><strong>Solution:</strong> Built a dashboard that displays activity and repository data.</p>
+      <a href="#">View Project</a>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+
+    <h3>Languages</h3>
+    <ul>
+      <li>Python</li>
+      <li>Dart</li>
+      <li>HTML & CSS</li>
+    </ul>
+
+    <h3>Frameworks</h3>
+    <ul>
+      <li>Flutter</li>
+      <li>Node.js</li>
+    </ul>
+
+    <h3>Tools</h3>
+    <ul>
+      <li>Git & GitHub</li>
+      <li>VS Code</li>
+      <li>Figma</li>
+    </ul>
+  </section>
+
+  
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Send me a message:</p>
+
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p>
+      <a href="#">GitHub</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Arex Mallon</p>
+  </footer>
+
+  <script>
+    // Placeholder for backend integration
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Form submitted! (Connect this to a Cloudflare Worker)");
+    });
+  </script>
+
+</body>
+</html>
