@@ -438,6 +438,8 @@
   <section id="contact" class="contact">
     <h2>Contact</h2>
     <p>Send me a message:</p>
+     <p class="disclaimer">In case if this is not working you can find me at: arex.mallon-21@cpu.edu.ph</p>
+
     <form id="contact-form" novalidate>
       <div class="form-row">
         <input type="text" id="cf-name" name="name" placeholder="Your Name" required autocomplete="name">
@@ -473,7 +475,6 @@
       btn.disabled = true;
 
       try {
-        // Replace this URL after you deploy your Cloudflare Worker (Step 4 below)
         const res = await fetch('https://contact-worker.arex-mallon-21.workers.dev', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
