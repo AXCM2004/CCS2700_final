@@ -429,8 +429,6 @@
   <section id="contact" class="contact">
     <h2>Contact</h2>
     <p>Send me a message:</p>
-     <p class="disclaimer">In case if this is not working you can find me at: arex.mallon-21@cpu.edu.ph</p>
-
     <form id="contact-form" novalidate>
       <div class="form-row">
         <input type="text" id="cf-name" name="name" placeholder="Your Name" required autocomplete="name">
@@ -438,8 +436,8 @@
       </div>
       <textarea id="cf-message" name="message" rows="4" placeholder="Your Message" required></textarea>
       <button type="submit" id="submit-btn">Send Message</button>
-      <div class="form-success" id="form-success">Message sent! I'll get back to you soon.</div>
-      <p class="form-note">Routed through a Cloudflare Worker — your email stays private.</p>
+      <div class="form-success" id="form-success">The message has been sent! I'll get back to you soon.</div>
+      <p class="form-note">This is routed through a Cloudflare Worker — your email will stay private.</p>
     </form>
     <div class="contact-links">
       <a href="https://github.com/AXCM2004" target="_blank" rel="noopener">GitHub</a>
@@ -460,7 +458,7 @@
       const name = document.getElementById('cf-name').value.trim();
       const email = document.getElementById('cf-email').value.trim();
       const message = document.getElementById('cf-message').value.trim();
-      if (!name || !email || !message) { alert('Please fill in all fields.'); return; }
+      if (!name || !email || !message) { alert('Please fill all the fields in'); return; }
 
       btn.textContent = 'Sending…';
       btn.disabled = true;
@@ -475,7 +473,7 @@
         form.reset();
         success.style.display = 'block';
       } catch {
-        alert('Could not send — opening your mail app as a fallback.');
+        alert('Sorry this is not working right now — opening your email to send it instead :)');
         window.location.href = 'mailto:arex.mallon-21@cpu.edu.ph?subject=Portfolio+Contact&body=' + encodeURIComponent(message);
       }
 
